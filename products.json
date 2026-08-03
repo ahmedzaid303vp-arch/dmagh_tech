@@ -70,14 +70,5 @@
     "description": "مساحة 256 جيجا | رام 12 جيجا | جديد",
     "image": "Honor_X9c.webp",
     "isNew": true
-  },
-   {
-    "id": 9,
-    "name": "vivo v70",
-    "category": "smartphone",
-    "price": 37000.00,
-    "description": "مساحة 256 جيجا | رام 12 جيجا | جديد",
-    "image": "vivov70.webp",
-    "isNew": true
   }
 ]
