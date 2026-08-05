@@ -1,0 +1,448 @@
+:root {
+    --bg-dark: #0b0d12;
+    --bg-card: rgba(18, 20, 29, 0.85);
+    --accent-yellow: #f5b000;
+    --accent-gold: #ffc107;
+    --accent-light: #ffd54f;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass-border: rgba(245, 176, 0, 0.12);
+    --glow-shadow: 0 8px 32px 0 rgba(245, 176, 0, 0.2);
+    --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: rgba(11, 13, 18, 0.9) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.text-accent {
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 600;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-yellow) !important;
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white !important;
+    font-weight: 700;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+    transition: var(--transition-fast);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    color: white !important;
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, var(--accent-yellow), var(--accent-gold));
+    color: #0b0d12 !important;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(245, 176, 0, 0.35);
+    transition: var(--transition-fast);
+}
+
+.btn-accent:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(245, 176, 0, 0.55);
+}
+
+footer {
+    background: #06070a !important;
+    border-top: 1px solid var(--glass-border);
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   Hero قسم الصيانة
+   ========================================== */
+.maintenance-hero {
+    position: relative;
+    padding: clamp(56px, 11vw, 100px) 0 clamp(40px, 8vw, 70px) 0;
+    background:
+        radial-gradient(circle at top right, rgba(245, 176, 0, 0.12), transparent 45%),
+        radial-gradient(circle at bottom left, rgba(255, 193, 7, 0.06), transparent 40%),
+        var(--bg-dark);
+    overflow: hidden;
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(245, 176, 0, 0.08);
+    border: 1px solid var(--glass-border);
+    color: var(--accent-yellow);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 8px 18px;
+    border-radius: 30px;
+}
+
+.maintenance-hero h1 {
+    font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+    line-height: 1.35;
+    background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.maintenance-hero-sub {
+    max-width: 720px;
+    color: var(--text-muted);
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+}
+
+html.light-mode .maintenance-hero {
+    background: none;
+}
+
+html.light-mode .maintenance-hero h1 {
+    background: linear-gradient(180deg, #34322d 0%, #5c584e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================
+   ختم الضمان — العنصر المميز للصفحة
+   ========================================== */
+.warranty-seal-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.warranty-seal {
+    width: clamp(120px, 22vw, 168px);
+    height: clamp(120px, 22vw, 168px);
+    animation: seal-float 5s ease-in-out infinite;
+    filter: drop-shadow(0 10px 25px rgba(245, 176, 0, 0.35));
+}
+
+@keyframes seal-float {
+    0%, 100% { transform: translateY(0) rotate(-6deg); }
+    50% { transform: translateY(-8px) rotate(-2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .warranty-seal { animation: none; }
+}
+
+/* ==========================================
+   شريط الأجهزة المدعومة
+   ========================================== */
+.brands-strip {
+    background: rgba(18, 20, 29, 0.5);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.brand-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(245, 176, 0, 0.06);
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: var(--transition-fast);
+}
+
+.brand-chip i {
+    color: var(--accent-yellow);
+}
+
+.brand-chip:hover {
+    transform: translateY(-3px);
+    border-color: rgba(245, 176, 0, 0.4);
+}
+
+/* ==========================================
+   عناوين الأقسام
+   ========================================== */
+.section-tag {
+    display: inline-block;
+    color: var(--accent-yellow);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    background: rgba(245, 176, 0, 0.08);
+    border: 1px solid var(--glass-border);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.section-title h2 {
+    font-size: clamp(1.5rem, 4vw, 2.3rem);
+}
+
+.section-sub {
+    color: var(--text-muted);
+    max-width: 620px;
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+}
+
+/* ==========================================
+   كروت الأعطال / الصيانة
+   ========================================== */
+.repair-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 30px 26px;
+    transition: var(--transition-fast);
+}
+
+.repair-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(245, 176, 0, 0.45);
+    box-shadow: var(--glow-shadow);
+}
+
+.repair-card:hover .repair-icon {
+    transform: rotate(-8deg) scale(1.06);
+}
+
+.repair-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-yellow));
+    color: #0b0d12;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+    box-shadow: 0 6px 18px rgba(245, 176, 0, 0.25);
+    transition: var(--transition-fast);
+}
+
+.repair-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent-yellow);
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: rgba(245, 176, 0, 0.08);
+    border: 1px solid var(--glass-border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+.repair-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.repair-list {
+    list-style: none;
+    padding-right: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.repair-list li {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.repair-list i {
+    color: var(--accent-yellow);
+    font-size: 0.8rem;
+}
+
+/* ==========================================
+   خطوات آلية العمل
+   ========================================== */
+.process-section {
+    background: rgba(18, 20, 29, 0.35);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.process-step {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 30px 22px 24px 22px;
+    text-align: center;
+    transition: var(--transition-fast);
+}
+
+.process-step:hover {
+    transform: translateY(-6px);
+    border-color: rgba(245, 176, 0, 0.4);
+}
+
+.step-number {
+    position: absolute;
+    top: -14px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-yellow));
+    color: #0b0d12;
+    font-weight: 800;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(245, 176, 0, 0.4);
+}
+
+.step-icon {
+    font-size: 1.8rem;
+    color: var(--accent-yellow);
+    margin: 14px 0 12px 0;
+}
+
+.process-step p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   لماذا تختارنا
+   ========================================== */
+.why-us-card {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: clamp(24px, 5vw, 48px);
+    backdrop-filter: blur(10px);
+}
+
+.why-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(245, 176, 0, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 16px;
+    height: 100%;
+}
+
+.why-item i {
+    color: var(--accent-yellow);
+    font-size: 1.3rem;
+    margin-top: 3px;
+}
+
+.why-item p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+/* ==========================================
+   بانر الدعوة لاتخاذ إجراء (CTA)
+   ========================================== */
+.cta-banner {
+    background: linear-gradient(135deg, rgba(245, 176, 0, 0.14), rgba(18, 20, 29, 0.6));
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: clamp(30px, 6vw, 56px) 20px;
+}
+
+.cta-banner p {
+    color: var(--text-muted);
+}
+
+html.light-mode .cta-banner {
+    background: linear-gradient(135deg, rgba(245, 176, 0, 0.1), rgba(255, 255, 255, 0.55));
+}
+
+/* ==========================================
+   الوضع الفاتح
+   ========================================== */
+html.light-mode .repair-card,
+html.light-mode .process-step,
+html.light-mode .why-us-card,
+html.light-mode .cta-banner {
+    border-color: rgba(180, 150, 90, 0.14) !important;
+    box-shadow: 0 12px 32px -14px rgba(43, 38, 32, 0.1);
+}
+
+html.light-mode .repair-card:hover,
+html.light-mode .process-step:hover {
+    box-shadow: 0 20px 40px -16px rgba(50, 45, 35, 0.16);
+}
+
+html.light-mode .brands-strip {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+html.light-mode .brand-chip {
+    background: rgba(180, 150, 90, 0.06);
+}
+
+html.light-mode .process-section {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+html.light-mode .why-item {
+    background: rgba(180, 150, 90, 0.06);
+}
+
+html.light-mode .repair-desc,
+html.light-mode .section-sub,
+html.light-mode .process-step p,
+html.light-mode .why-item p,
+html.light-mode .cta-banner p,
+html.light-mode .maintenance-hero-sub,
+html.light-mode .repair-time {
+    color: var(--text-muted) !important;
+}
+
+/* ==========================================
+   استجابة على المقاسات الصغيرة
+   ========================================== */
+@media (max-width: 380px) {
+    .repair-card, .process-step {
+        padding: 24px 18px;
+    }
+}

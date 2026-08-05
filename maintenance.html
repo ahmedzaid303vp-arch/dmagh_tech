@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صيانة الموبايلات | دماغ.تك</title>
+    <meta name="description" content="دماغ.تك لصيانة الموبايلات: تغيير شاشات وبطاريات، إصلاح أعطال الشحن والمياه والكاميرا، وحل مشاكل السوفت وير — بقطع أصلية وضمان حقيقي.">
+    <script>
+        if (localStorage.getItem('site-theme') === 'light') {
+            document.documentElement.classList.add('light-mode');
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="maintenance.css">
+</head>
+<body>
+
+    <!-- Navbar الموحد -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-2">
+        <div class="container">
+            <a class="navbar-brand logo-container" href="index.html">
+                <span class="logo-text">
+                    <span class="logo-dmag">دماغ</span> <span class="logo-tech">تك</span>
+                </span>
+                <svg class="nav-logo-svg" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M242 60C215 60 190 70 170 88C152 75 130 75 110 90C90 105 80 130 80 155C62 168 50 192 50 220C40 238 40 262 50 282C45 305 55 330 75 348C85 370 108 390 135 390C155 405 180 412 205 410C222 420 242 420 242 420V60Z" fill="#FFFFFF"/>
+                    <g stroke="#090b10" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M135 130C110 148 120 182 142 182C162 182 172 162 150 138"/>
+                        <path d="M90 185C72 202 82 238 110 238C132 238 142 218 122 198"/>
+                        <path d="M102 290C85 275 95 245 122 255"/>
+                        <path d="M165 105C145 122 155 152 175 148"/>
+                        <path d="M170 360C148 345 158 312 182 320"/>
+                        <path d="M200 150C180 168 188 198 210 192"/>
+                        <path d="M202 300C182 285 190 255 212 265"/>
+                        <path d="M142 332C125 320 130 295 148 295"/>
+                    </g>
+                    <path d="M246 50V430" stroke="#0b0d12" stroke-width="10" stroke-linecap="round"/>
+                    <path d="M270 60C295 60 320 70 340 88C358 75 380 75 400 90C420 105 430 130 430 155C448 168 460 192 460 220C470 238 470 262 460 282C465 305 455 330 435 348C425 370 402 390 375 390C355 405 330 412 305 410C288 420 270 420 270 420V60Z" fill="url(#faceGradNav)"/>
+                    <g stroke="#090b10" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M270 140H325L358 108H395"/>
+                        <path d="M270 210H358L388 188H418"/>
+                        <path d="M270 280H348L378 310H405"/>
+                        <path d="M270 350H322L355 382"/>
+                    </g>
+                    <circle cx="395" cy="108" r="13" fill="#ffb700" stroke="#090b10" stroke-width="10"/>
+                    <circle cx="418" cy="188" r="13" fill="#ffb700" stroke="#090b10" stroke-width="10"/>
+                    <circle cx="405" cy="310" r="13" fill="#ffb700" stroke="#090b10" stroke-width="10"/>
+                    <circle cx="355" cy="382" r="13" fill="#ffb700" stroke="#090b10" stroke-width="10"/>
+                    <defs>
+                        <linearGradient id="faceGradNav" x1="270" y1="60" x2="470" y2="420" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#ffca28"/>
+                            <stop offset="45%" stop-color="#ffb300"/>
+                            <stop offset="100%" stop-color="#f57c00"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fs-6">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="smartphones.html">الموبايلات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="used.html">كسر زيرو</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accessories.html">الإكسسوارات</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="maintenance.html">صيانة الموبايلات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">حلول برمجية</a></li>
+                </ul>
+                <div class="nav-actions mt-3 mt-lg-0">
+                    <a href="https://wa.me/201145263416" target="_blank" class="btn btn-whatsapp px-4 py-2">
+                        <i class="fab fa-whatsapp ms-1 fs-5"></i> تواصل سريع
+                    </a>
+                    <button id="theme-toggle" class="btn btn-theme-toggle" title="تفعيل الوضع الفاتح">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== Hero الصيانة ===================== -->
+    <section class="maintenance-hero">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-8 text-center text-lg-start">
+                    <span class="hero-eyebrow"><i class="fas fa-screwdriver-wrench ms-2"></i> قسم الصيانة المعتمدة</span>
+                    <h1 class="fw-bold mt-3 mb-3">عطل موبايلك؟ إحنا نصلحه صح من أول مرة</h1>
+                    <p class="lead maintenance-hero-sub mx-auto mx-lg-0 mb-4">
+                        فنيين متخصصين وقطع غيار أصلية لكل أنواع الأعطال: شاشات، بطاريات، شحن، مياه،
+                        كاميرا، وسوفت وير. تشخيص واضح، سعر معلن قبل ما نبدأ، وضمان حقيقي على الشغل.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                        <a href="https://wa.me/201145263416?text=أهلاً%20دماغ.تك،%20عندي%20عطل%20في%20الموبايل%20وعايز%20تشخيص%20مجاني" target="_blank" class="btn btn-whatsapp px-4 py-2">
+                            <i class="fab fa-whatsapp ms-1"></i> اطلب تشخيص مجاني
+                        </a>
+                        <a href="#common-repairs" class="btn btn-accent px-4 py-2">
+                            <i class="fas fa-list-check ms-2"></i> استعرض الأعطال الشائعة
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="warranty-seal-wrap">
+                        <svg class="warranty-seal" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="sealGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#ffca28"/>
+                                    <stop offset="100%" stop-color="#f57c00"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="92" fill="none" stroke="url(#sealGrad)" stroke-width="3" stroke-dasharray="6 7"/>
+                            <circle cx="100" cy="100" r="76" fill="rgba(245,176,0,0.07)" stroke="url(#sealGrad)" stroke-width="2"/>
+                            <path id="sealTextPathTop" d="M 30 100 A 70 70 0 0 1 170 100" fill="none"/>
+                            <path id="sealTextPathBottom" d="M 170 100 A 70 70 0 0 1 30 100" fill="none"/>
+                            <text font-family="Cairo, sans-serif" font-weight="800" font-size="15" fill="#ffd54f" letter-spacing="1.5">
+                                <textPath href="#sealTextPathTop" startOffset="50%" text-anchor="middle">ضمان حقيقي</textPath>
+                            </text>
+                            <text font-family="Cairo, sans-serif" font-weight="800" font-size="15" fill="#ffd54f" letter-spacing="1.5">
+                                <textPath href="#sealTextPathBottom" startOffset="50%" text-anchor="middle">قطع أصلية</textPath>
+                            </text>
+                            <g stroke="#ffd54f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                                <path d="M100 55 L100 100 L128 116"/>
+                            </g>
+                            <circle cx="100" cy="100" r="5" fill="#ffd54f"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== الأجهزة المدعومة ===================== -->
+    <section class="brands-strip py-4">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <span class="brand-chip"><i class="fab fa-apple"></i> آيفون</span>
+                <span class="brand-chip"><i class="fas fa-mobile-screen"></i> سامسونج</span>
+                <span class="brand-chip"><i class="fas fa-mobile-screen"></i> أوبو</span>
+                <span class="brand-chip"><i class="fas fa-mobile-screen"></i> شاومي</span>
+                <span class="brand-chip"><i class="fas fa-mobile-screen"></i> هونر</span>
+                <span class="brand-chip"><i class="fas fa-mobile-screen"></i> إنفينكس</span>
+                <span class="brand-chip"><i class="fas fa-ellipsis"></i> وأي ماركة تانية</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== الأعطال الشائعة ===================== -->
+    <section id="common-repairs" class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <span class="section-tag">إيه اللي بنصلحه</span>
+                <h2 class="fw-bold text-white mt-2">الأعطال الشائعة اللي بنتعامل معاها</h2>
+                <p class="section-sub mx-auto">من أول تغيير شاشة لحد إنقاذ جهاز غرقان — بنشخّص المشكلة صح ونصلحها بدقة</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="repair-card h-100">
+                        <div class="repair-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                        <span class="repair-time"><i class="fas fa-clock"></i> يستغرق غالبًا 30-60 دقيقة</span>
+                        <h4 class="fw-bold text-white mb-2">تغيير الشاشات</h4>
+                        <p class="repair-desc">شاشة مكسورة، فيها خطوط، أو مش بتلمس صح؟ بنغيرها بشاشة أصلية ونضبط دقة اللمس والألوان.</p>
+                        <ul class="repair-list">
+                            <li><i class="fas fa-check"></i> شاشات OLED / AMOLED أصلية</li>
+                            <li><i class="fas fa-check"></i> اختبار لمس وألوان قبل التسليم</li>
+                            <li><i class="fas fa-check"></i> ضمان على الشاشة والتركيب</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="repair-card h-100">
+                        <div class="repair-icon"><i class="fas fa-battery-full"></i></div>
+                        <span class="repair-time"><i class="fas fa-clock"></i> يستغرق غالبًا 20-40 دقيقة</span>
+                        <h4 class="fw-bold text-white mb-2">تغيير البطاريات</h4>
+                        <p class="repair-desc">البطارية بتخلص بسرعة أو الجهاز بيقفل فجأة؟ بنغير البطارية ونعيد ضبط قراءة النسبة بدقة.</p>
+                        <ul class="repair-list">
+                            <li><i class="fas fa-check"></i> بطاريات أصلية بصحة 100%</li>
+                            <li><i class="fas fa-check"></i> اختبار شحن وتفريغ كامل</li>
+                            <li><i class="fas fa-check"></i> ضمان 6 شهور على البطارية</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="repair-card h-100">
+                        <div class="repair-icon"><i class="fas fa-plug-circle-bolt"></i></div>
+                        <span class="repair-time"><i class="fas fa-clock"></i> يستغرق غالبًا 20-45 دقيقة</span>
+                        <h4 class="fw-bold text-white mb-2">أعطال الشحن والمنافذ</h4>
+                        <p class="repair-desc">"جهازك واقف مش بيشحن"؟ بنفحص منفذ الشحن ودوائر الطاقة ونصلح أو نستبدل حسب الحالة.</p>
+                        <ul class="repair-list">
+                            <li><i class="fas fa-check"></i> تنظيف أو تغيير منفذ الشحن</li>
+                            <li><i class="fas fa-check"></i> فحص دوائر الطاقة بدقة</li>
+                            <li><i class="fas fa-check"></i> اختبار شحن كامل بعد الإصلاح</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="repair-card h-100">
+                        <div class="repair-icon"><i class="fas fa-droplet-slash"></i></div>
+                        <span class="repair-time"><i class="fas fa-clock"></i> يبدأ بمعاينة فورية</span>
+                        <h4 class="fw-bold text-white mb-2">أضرار المياه والرطوبة</h4>
+                        <p class="repair-desc">وقع في المياه ولا تحاول تشغّله بنفسك — هاته لعندنا بسرعة، وكل ثانية بتفرق في إنقاذ الدوائر.</p>
+                        <ul class="repair-list">
+                            <li><i class="fas fa-check"></i> تنظيف كيميائي متخصص للدوائر</li>
+                            <li><i class="fas fa-check"></i> محاولة إنقاذ البيانات المهمة</li>
+                            <li><i class="fas fa-check"></i> فحص شامل بعد التجفيف والتنظيف</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="repair-card h-100">
+                        <div class="repair-icon"><i class="fas fa-camera"></i></div>
+                        <span class="repair-time"><i class="fas fa-clock"></i> يستغرق غالبًا 30-50 دقيقة</span>
+                        <h4 class="fw-bold text-white mb-2">أعطال الكاميرا والصوت</h4>
+                        <p class="repair-desc">كاميرا مش بتظبط، سماعة مكالمة واطية، أو ميكروفون مش شغال؟ بنشخص القطعة المتعطلة ونستبدلها.</p>
+                        <ul class="repair-list">
+                            <li><i class="fas fa-check"></i> إصلاح الكاميرا الأمامية والخلفية</li>
+                            <li><i class="fas fa-check"></i> سماعة المكالمة والسماعة الخارجية</li>
+                            <li><i class="fas fa-check"></i> اختبار صوت وتصوير كامل</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="repair-card h-100">
+                        <div class="repair-icon"><i class="fas fa-code-branch"></i></div>
+                        <span class="repair-time"><i class="fas fa-clock"></i> يستغرق غالبًا 15-30 دقيقة</span>
+                        <h4 class="fw-bold text-white mb-2">مشاكل السوفت وير</h4>
+                        <p class="repair-desc">الجهاز بيهنج، بيعمل ريستارت لوحده، أو واقف على شعار البداية؟ بنعمل فورمات وتحديث بأمان.</p>
+                        <ul class="repair-list">
+                            <li><i class="fas fa-check"></i> حل مشاكل التهنيج والريستارت</li>
+                            <li><i class="fas fa-check"></i> فورمات وتحديث نظام آمن</li>
+                            <li><i class="fas fa-check"></i> استرجاع الجهاز من وضع التعليق</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== خطوات آلية العمل ===================== -->
+    <section class="py-5 process-section">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <span class="section-tag">آلية العمل</span>
+                <h2 class="fw-bold text-white mt-2">إزاي بنصلح جهازك؟</h2>
+                <p class="section-sub mx-auto">من أول ما تبعتلنا رسالة لحد ما تستلم جهازك شغال بضمان</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="process-step h-100">
+                        <div class="step-number">1</div>
+                        <div class="step-icon"><i class="fas fa-comment-dots"></i></div>
+                        <h5 class="fw-bold text-white">وصف العطل واتساب</h5>
+                        <p>ابعتلنا نوع الجهاز والمشكلة اللي حاسس بيها، ولو عندك فيديو أو صورة أحسن.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="process-step h-100">
+                        <div class="step-number">2</div>
+                        <div class="step-icon"><i class="fas fa-magnifying-glass"></i></div>
+                        <h5 class="fw-bold text-white">تشخيص مجاني</h5>
+                        <p>فريقنا بيفحص الجهاز كويس ويحدد السبب الحقيقي للعطل من غير أي التزام.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="process-step h-100">
+                        <div class="step-number">3</div>
+                        <div class="step-icon"><i class="fas fa-tags"></i></div>
+                        <h5 class="fw-bold text-white">سعر واضح قبل البدء</h5>
+                        <p>بتعرف السعر والمدة بالظبط قبل ما نلمس جهازك، مفيش مفاجآت في الفاتورة.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="process-step h-100">
+                        <div class="step-number">4</div>
+                        <div class="step-icon"><i class="fas fa-shield-heart"></i></div>
+                        <h5 class="fw-bold text-white">تسليم بالضمان</h5>
+                        <p>بنسلمك جهازك شغال ومختبر بالكامل، مع ضمان حقيقي على القطعة والصنعة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== لماذا تختارنا ===================== -->
+    <section class="py-5">
+        <div class="container">
+            <div class="why-us-card">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-5">
+                        <span class="section-tag">لماذا دماغ.تك</span>
+                        <h2 class="fw-bold text-white mt-2 mb-3">جهازك في أيد أمينة</h2>
+                        <p class="section-sub mb-0">مش بس بنصلح العطل، إحنا بنحافظ على عمر جهازك الافتراضي كمان بقطع أصلية وصنعة دقيقة.</p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <div class="why-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <div>
+                                        <h6 class="fw-bold text-white m-0">قطع غيار أصلية</h6>
+                                        <p class="m-0">من غير قطع تجارية رخيصة بتقلل عمر جهازك.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="why-item">
+                                    <i class="fas fa-shield-halved"></i>
+                                    <div>
+                                        <h6 class="fw-bold text-white m-0">ضمان حقيقي</h6>
+                                        <p class="m-0">لو رجعت نفس المشكلة، رجّعلنا الجهاز من غير أي تكلفة إضافية.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="why-item">
+                                    <i class="fas fa-user-gear"></i>
+                                    <div>
+                                        <h6 class="fw-bold text-white m-0">فنيين معتمدين</h6>
+                                        <p class="m-0">خبرة تتجاوز 8 سنين في صيانة كل الماركات والموديلات.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="why-item">
+                                    <i class="fas fa-hand-holding-dollar"></i>
+                                    <div>
+                                        <h6 class="fw-bold text-white m-0">تسعير شفاف</h6>
+                                        <p class="m-0">بتعرف السعر النهائي قبل الموافقة، بدون أي مفاجآت.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CTA ختامي ===================== -->
+    <section class="py-5">
+        <div class="container">
+            <div class="cta-banner text-center">
+                <h3 class="fw-bold text-white mb-2">جهازك محتاج صيانة دلوقتي؟</h3>
+                <p class="mb-4">ابعتلنا تفاصيل العطل على واتساب واحصل على تشخيص مجاني وسعر واضح خلال دقائق</p>
+                <a href="https://wa.me/201145263416?text=أهلاً%20دماغ.تك،%20عندي%20عطل%20في%20الموبايل%20وعايز%20تشخيص%20مجاني" target="_blank" class="btn btn-whatsapp px-5 py-3 fs-5">
+                    <i class="fab fa-whatsapp ms-2"></i> تواصل لحجز الصيانة
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center mt-3">
+        <p class="m-0">جميع الحقوق محفوظة &copy; 2026 - دماغ.تك</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
