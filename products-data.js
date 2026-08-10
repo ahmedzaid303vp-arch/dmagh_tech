@@ -4,7 +4,7 @@
 
 const SUPABASE_URL = 'https://uyegururktfostnjnyrp.supabase.co';
 // ⚠️ ضع هنا المفتاح الخاص بك (Publishable Key) الذي نسخته من Supabase
-const SUPABASE_KEY = 'YOUR_PUBLISHABLE_KEY_HERE';
+const SUPABASE_KEY = 'sb_publishable_t-e883_62CIW-rtUFfQwUg_gPlWAqQn';
 
 // تهيئة عميل Supabase
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
