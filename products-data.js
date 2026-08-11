@@ -13,14 +13,40 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 let PRODUCTS_DATA = [];
 
 /**
- * دالة لجلب جميع المنتجات من Supabase
- * @returns {Promise<Array>} مصفوفة المنتجات
+ * دالة تحويل المنتج من شكل الداتابيز الهيكلي لشكل الفرونت إند
+ * @param {Object} item - كائن المنتج القادم من Supabase
+ * @returns {Object} المنتج المنسق
+ */
+function formatProduct(item) {
+  const specs = item.specs || {};
+
+  return {
+    id: item.id,
+    name: item.name,
+    price: item.price,
+    image: item.image ? (item.image.startsWith('img/') ? item.image : `img/${item.image}`) : 'img/default.png',
+    isNew: item.is_new,
+    description: item.description,
+    category: item.categories?.slug || 'smartphones',
+    ...specs
+  };
+}
+
+/**
+ * دالة لجلب جميع المنتجات من Supabase مع ربط جدول الأقسام (Categories)
+ * @returns {Promise<Array>} مصفوفة المنتجات المنسقة
  */
 async function fetchProducts() {
   try {
     const { data, error } = await supabaseClient
       .from('products')
-      .select('*')
+      .select(`
+        *,
+        categories (
+          slug,
+          name
+        )
+      `)
       .order('id', { ascending: true });
 
     if (error) {
@@ -28,8 +54,40 @@ async function fetchProducts() {
       return [];
     }
 
-    PRODUCTS_DATA = data;
-    return data;
+    const formattedData = data.map(formatProduct);
+    PRODUCTS_DATA = formattedData;
+    return formattedData;
+  } catch (err) {
+    console.error('حدث خطأ غير متوقع:', err);
+    return [];
+  }
+}
+
+/**
+ * دالة لجلب المنتجات حسب القسم (smartphones / used / accessories)
+ * @param {string} categorySlug - الاسم الفريد للقسم
+ * @returns {Promise<Array>} مصفوفة المنتجات المنسقة للقسم
+ */
+async function fetchProductsByCategory(categorySlug) {
+  try {
+    const { data, error } = await supabaseClient
+      .from('products')
+      .select(`
+        *,
+        categories!inner (
+          slug,
+          name
+        )
+      `)
+      .eq('categories.slug', categorySlug)
+      .order('id', { ascending: true });
+
+    if (error) {
+      console.error(`خطأ أثناء جلب قسم ${categorySlug}:`, error.message);
+      return [];
+    }
+
+    return data.map(formatProduct);
   } catch (err) {
     console.error('حدث خطأ غير متوقع:', err);
     return [];
