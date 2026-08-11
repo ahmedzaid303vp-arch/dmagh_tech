@@ -3,7 +3,7 @@
 // ==========================================
 
 const SUPABASE_URL = 'https://uyegururktfostnjnyrp.supabase.co';
-// ⚠️ ضع هنا المفتاح الخاص بك (Publishable Key) الذي نسخته من Supabase
+// المفتاح الخاص بك (Publishable Key)
 const SUPABASE_KEY = 'sb_publishable_t-e883_62CIW-rtUFfQwUg_gPlWAqQn';
 
 // تهيئة عميل Supabase
@@ -20,6 +20,9 @@ let PRODUCTS_DATA = [];
 function formatProduct(item) {
   const specs = item.specs || {};
 
+  // استخراج اسم القسم وسحب الصيغة المطلوبة
+  let slug = item.categories?.slug || item.category || 'smartphones';
+
   return {
     id: item.id,
     name: item.name,
@@ -27,7 +30,9 @@ function formatProduct(item) {
     image: item.image ? (item.image.startsWith('img/') ? item.image : `img/${item.image}`) : 'img/default.png',
     isNew: item.is_new,
     description: item.description,
-    category: item.categories?.slug || 'smartphones',
+    // معالجة القيمة لتتوافق سواء كانت الصفحات تبحث عن المفرد أو الجمع
+    category: slug,
+    rawCategory: slug,
     ...specs
   };
 }
@@ -70,6 +75,11 @@ async function fetchProducts() {
  */
 async function fetchProductsByCategory(categorySlug) {
   try {
+    // دعم الاستعلام بالجمع والمفرد للقسم
+    let targetSlug = categorySlug;
+    if (categorySlug === 'smartphone') targetSlug = 'smartphones';
+    if (categorySlug === 'accessory') targetSlug = 'accessories';
+
     const { data, error } = await supabaseClient
       .from('products')
       .select(`
@@ -79,7 +89,7 @@ async function fetchProductsByCategory(categorySlug) {
           name
         )
       `)
-      .eq('categories.slug', categorySlug)
+      .eq('categories.slug', targetSlug)
       .order('id', { ascending: true });
 
     if (error) {
